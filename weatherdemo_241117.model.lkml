@@ -25,10 +25,12 @@ explore: records {
   join: countries {
     type: inner
     sql_on:  ${stations.country_id} = ${countries.country_id} ;;
+    relationship: many_to_one
   }
   join: continents {
     type: inner
     sql_on: ${continents.continent_id} = ${countries.continent_id} ;;
+    relationship: many_to_one
   }
 }
 
